@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+     <style>
+
+     </style>
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <link type="text/javascript" rel="javascript" href="js/myscript.js">
+   </head>
+   <body>
+     <nav>
+       <div class="nav-wrapper green">
+         <a href="#" class="brand-logo center">MTC</a>
+       </div>
+     </nav>
+     <div class="row">
+       <div class="col s12 m4 l3">
+         <ul id="slide-out" class="sidenav sidenav-fixed">
+           <img src="images/Poshan.jpg">
+           <div style="padding-left:50px;">
+             <bold>
+               <h6>Bharuch MTC</h6>
+               <h6>Sam Shukla</h6>
+             </bold>
+           </div>
+           <li><a href="underTreatment.html">Children Under Treatment</a></li>
+           <li><a href="waitingList.html">Waiting List of Children</a></li>
+           <li><a href="dischargedChildren.html">Discharged Children</a></li>
+           <li><a href="MTCDetails.html">MTC Details</a></li>
+         </ul>
+       </div>
+       <div class="col s12 m8 l9">
+         <h5 >Waiting List of Children</h5>
+         <table class="striped">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Name</th>
+              <th>Father's Name</th>
+              <th>Gender</th>
+              <th>Age</th>
+              <th>Block</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>BPL</th>
+              <th>LS</th>
+              <th>Approve</th>
+              <th>Reject</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>ABC</td>
+              <td>XYZ</td>
+              <td>Female</td>
+              <td>3</td>
+              <td>ZZZ</td>
+              <td>YYY</td>
+              <td>9473658463</td>
+              <td>True</td>
+              <td></td>
+              <td><button class="waves-effect waves-light btn-small green" id="approve" onclick="approves()">Approve</button></td>
+              <td><button class="waves-effect waves-light btn-small green" id="reject" onclick="rejects()">Reject</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+     <!--JavaScript at end of body for optimized loading-->
+     <script type="text/javascript" src="js/materialize.min.js"></script>
+     <script>
+      function approves()
+      {
+        var txt;
+        var SAMNo = prompt("Please enter SAM number");
+        if (SAMNo == null || SAMNo == "") {
+          txt = "Approval canceled";
+        }
+        else {
+          txt = "Child approved";
+          document.getElementById("approve").disabled = true;
+        }
+        alert(txt);
+      }
+     </script>
+     <script>
+      function rejects()
+      {
+        var txt;
+        var res = prompt("Please enter reason for rejection");
+        if (res == null || res == "") {
+          txt = "Rejection canceled";
+        }
+        else {
+          document.getElementById("reject").disabled = true;
+          txt = "Child Rejected";
+        }
+        alert(txt);
+      }
+     </script>
+   </body>
+ </html>

@@ -78,6 +78,10 @@
                      <td>03-07-2018</td>
                    </tr>
                    <tr>
+                     <td>Premature Discharge</td>
+                     <td>False</td>
+                   </tr>
+                   <tr>
                      <td>LS</td>
                      <td></td>
                    </tr>
@@ -94,6 +98,10 @@
                      <td>3</td>
                    </tr>
                    <tr>
+                     <td>Date Of Discharge</td>
+                     <td>13-07-2018</td>
+                   </tr>
+                   <tr>
                      <td>About to Discharge</td>
                      <td>No</td>
                    </tr>
@@ -103,7 +111,7 @@
            </div>
            <div class="col l6 m6">
              <div class="row">
-               <h5>Treatment Details</h5>
+               <br><strong><h5>Treatment Details</h5></strong><br>
                <table class=" col l10 offset-l1 highlight bordered">
                 <thead>
                   <tr>
@@ -124,28 +132,28 @@
                     <td>0.2</td>
                   </tr>
                   <tr>
-                    <td>1</td>
+                    <td>2</td>
                     <td>07-07-2018</td>
                     <td>3.4</td>
                     <td>25</td>
                     <td>0.2</td>
                   </tr>
                   <tr>
-                    <td>1</td>
+                    <td>3</td>
                     <td>09-07-2018</td>
                     <td>3.5</td>
                     <td>26</td>
                     <td>0.1</td>
                   </tr>
                   <tr>
-                    <td>1</td>
+                    <td>4</td>
                     <td>11-07-2018</td>
                     <td>3.7</td>
                     <td>26</td>
                     <td>0.2</td>
                   </tr>
                   <tr>
-                    <td>1</td>
+                    <td>5</td>
                     <td>13-07-2018</td>
                     <td>4</td>
                     <td>26</td>
@@ -188,82 +196,6 @@
              </div>
            </div>
          </div>
-         <br>
-         <div class="row">
-           <div class="col s8 l4 m4">
-             <button class="waves-effect waves-light btn-large green" style="padding-left: 48px; padding-right: 48px;" onclick="addDet()" id="submit1">Today's Details</button>
-           </div>
-           <div class="col s8 l4 m4">
-             <button class="waves-effect waves-light btn-large green" style="padding-left: 48px; padding-right: 48px;" onclick="OthDet()">Other Details</button>
-           </div>
-           <div class="col s8 l4 m4">
-             <button class="waves-effect waves-light btn-large green" style="padding-left: 48px; padding-right: 48px;" onclick="showDet()">See Other Details</button>
-           </div>
-         </div>
-         <div class="row">
-           <div class="col s8 l4 m4">
-             <button class="waves-effect waves-light btn-large green" id="dis1" onclick="discharge()">About To Discharge</button>
-           </div>
-           <div class="col s8 l4 m4">
-             <button class="waves-effect waves-light btn-large green" id="dis2" style="padding-left: 63px; padding-right: 63px;" onclick="discharged()">Discharge</button>
-           </div>
-           <div class="col s8 l4 m4">
-             <button class="waves-effect waves-light btn-large green" id="dis3" onclick="preDischarged()">Premature Discharge</button>
-           </div>
-         </div>
-         <div class="row" id="td" style="display:none">
-           <div class="col s8 l6 m6">
-             <form action="" method="post">
-               <h5>Add today's Weight and Height</h5>
-               <div class="row">
-                 <div class="col s12">
-                   <label for="weight" class="black-text">Weight</label>
-                   <input id="weight" type="number" class="validate" required>
-                 </div>
-               </div>
-               <div class="row">
-                 <div class="col s12">
-                   <label for="height" class="black-text">Height</label>
-                   <input id="height" type="number" class="validate" required>
-                 </div>
-               </div>
-               <div class="row">
-                 <div class="col s12">
-                   <button class="waves-effect waves-light btn green" onclick="addedDet()">Submit</button>
-                 </div>
-               </div>
-             </form>
-           </div>
-         </div>
-         <div class="row" id="sdt" style="display:none">
-           <div class="col s8 l6 m6 offset-l6 offset-m6">
-             <h5 >Other Treatments</h5>
-             <table class="highlight bordered">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Treatment</th>
-                  <th>Date</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Medicines for Fever</td>
-                  <td>10-07-2018</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Medicines for Stomach Ache</td>
-                  <td>15-07-2018</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
       <div class="row">
         <div class="col s12 m4 l3">
             <ul id="nav-mobile" class="side-nav">
@@ -284,63 +216,6 @@
         </div>
 
       <!--JavaScript at end of body for optimized loading-->
-    <script>
-      function addDet()
-      {
-        document.getElementById('td').style.display='block';
-      }
-    </script>
-
-    <script>
-      function showDet()
-      {
-        document.getElementById('sdt').style.display='block';
-      }
-    </script>
-
-    <script>
-    function addedDet()
-    {
-      document.getElementById('td').style.display='none';
-      document.getElementById("submit1").disabled = true;
-    }
-   </script>
-
-   <script>
-   function discharge()
-   {
-     document.getElementById("dis1").disabled = true;
-   }
-  </script>
-
-  <script>
-  function discharged()
-  {
-    document.getElementById("dis2").disabled = true;
-  }
-  </script>
-
-  <script>
-  function preDischarged()
-  {
-    document.getElementById("dis3").disabled = true;
-  }
- </script>
-
-   <script>
-    function OthDet()
-    {
-      var txt;
-      var otdt = prompt("Enter the extra treatments given today.");
-      if (otdt == null || otdt == "") {
-        txt = "You have not entered any data.";
-      }
-      else {
-        txt = "Extra treatments added";
-      }
-      alert(txt);
-    }
-   </script>
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>

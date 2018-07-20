@@ -5,12 +5,19 @@
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <!--Import materialize.css-->
      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-     <style>
-
-     </style>
+     <script type="text/javascript">
+     function validatepass()
+     {
+       var pass = document.form1.pass.value;
+       if(pass.length<6)
+       {
+         alert("Password should be of atleast 6 characters");
+         return false;
+       }
+     }
+     </script>
      <!--Let browser know website is optimized for mobile-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-     <link type="text/javascript" rel="javascript" href="js/myscript.js">
    </head>
    <body background="images/bg.jpg">
      <div class="row">
@@ -29,7 +36,7 @@
          <img src="images/img4.jpeg">
        </div>
        <div class="col s8 l6">
-           <form class="col s8 l8 offset-s2 offset-l2" action="underTreatment.html" method="post">
+           <form class="col s8 l8 offset-s2 offset-l2" name="form1" onsubmit="return validatepass()" action="underTreatment.html" method="post">
              <div class="row">
                <center><h3>LOGIN HERE</h3></center>
              </div>
@@ -41,7 +48,7 @@
              </div>
              <div class="row">
               <div class="input-field col s12">
-               <input id="password" type="password" class="validate" required>
+               <input id="password" name="pass" type="password" class="validate" required>
                <label for="password" class="black-text">Password</label>
               </div>
             </div>

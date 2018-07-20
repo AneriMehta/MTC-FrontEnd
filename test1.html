@@ -10,12 +10,56 @@
 
    </head>
    <body>
-     <div class="row">
+     <div class="row" id="set1" style="display:none">
+       <div class="container">
+         <div class="col s12 m12 l12">
+           <nav class="nav-wrapper green">
+              <a href="#" class="brand-logo center">MTC</a>
+              <ul>
+                <li><button id="dis1" onclick="hide1()"><i class="material-icons">menu</i></button></li>
+              </ul>
+           </nav>
+           <h5 >MTC Profile</h5>
+           <table class="striped">
+            <tr>
+              <td>Name</td>
+              <td>hhh</td>
+            </tr>
+            <tr>
+              <td>Incharge Name</td>
+              <td>jjj</td>
+            </tr>
+            <tr>
+              <td>Number of Beds</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>jjj@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td>hhh</td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td>23.66665,25,87765</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+     </div>
+     <div class="row" id="set2" style="display:block">
        <div class="col s12 m4 l3">
          <div class="container">
-           <a href="" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
+           <a href="" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
          </div>
            <ul id="nav-mobile" class="side-nav fixed">
+             <li>
+               <nav class="nav-wrapper green">
+                 <button id="dis2" onclick="hide2()"><i class="material-icons">menu</i></button>
+               </nav>
+             </li><br>
              <img src="images/Poshan.jpg">
              <div style="padding-left:50px;">
                <bold>
@@ -27,7 +71,7 @@
              <li><a href="waitingList.html">Waiting List of Children</a></li>
              <li><a href="dischargedChildren.html">Discharged Children</a></li>
              <li><a href="MTCDetails.html">MTC Details</a></li>
-             <li style="padding-left:50px; padding-right: 100px;"><a href="index.html" class="waves-effect waves-light btn green">LOGOUT</a></li>
+             <li style="padding-left:50px;"><a href="index.html" class="waves-effect waves-light btn green">LOGOUT</a></li>
            </ul>
        </div>
        <div class="col s12 m8 l9">
@@ -35,7 +79,7 @@
             <a href="#" class="brand-logo center">MTC</a>
          </nav>
          <h5 >MTC Profile</h5>
-         <table border="0">
+         <table class="striped">
           <tr>
             <td>Name</td>
             <td>hhh</td>
@@ -72,5 +116,19 @@
         $(".button-collapse").sideNav();
       });
       </script>
+      <script>
+      function hide2()
+      {
+        document.getElementById('set2').style.display='none';
+        document.getElementById("set1").style.display ='block';
+      }
+     </script>
+     <script>
+     function hide1()
+     {
+       document.getElementById('set1').style.display='none';
+       document.getElementById("set2").style.display ='block';
+     }
+    </script>
    </body>
  </html>

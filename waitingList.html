@@ -1,41 +1,27 @@
 <!DOCTYPE html>
  <html>
-   <head>
-     <!--Import Google Icon Font-->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!--Import materialize.css-->
-     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-     <style>
+ <head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!--Import materialize.css-->
+   <!--Let browser know website is optimized for mobile-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-     </style>
-     <!--Let browser know website is optimized for mobile-->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-     <link type="text/javascript" rel="javascript" href="js/myscript.js">
-   </head>
-   <body>
-     <nav>
-       <div class="nav-wrapper green">
+ </head>
+ <body background="images/bg4.jpg">
+   <div class="row">
+     <div class="col s12">
+       <nav class="nav-wrapper green">
          <a href="#" class="brand-logo center">MTC</a>
-       </div>
-     </nav>
-     <div class="row">
-       <div class="col s12 m4 l3">
-         <ul id="slide-out" class="sidenav sidenav-fixed">
-           <img src="images/Poshan.jpg">
-           <div style="padding-left:50px;">
-             <bold>
-               <h6>Bharuch MTC</h6>
-               <h6>Sam Shukla</h6>
-             </bold>
-           </div>
-           <li><a href="underTreatment.html">Children Under Treatment</a></li>
-           <li><a href="waitingList.html">Waiting List of Children</a></li>
-           <li><a href="dischargedChildren.html">Discharged Children</a></li>
-           <li><a href="MTCDetails.html">MTC Details</a></li>
+         <ul class="right">
+           <li>
+             <a href="" data-activates="nav-mobile" class="sidebar"><i class="material-icons">menu</i></a>
+           </li>
          </ul>
-       </div>
-       <div class="col s12 m8 l9">
-         <h5 >Waiting List of Children</h5>
+       </nav>
+       <div class="container">
+         <br><h5><strong>Waiting List of Children</strong></h5><br>
          <table class="striped">
           <thead>
             <tr>
@@ -66,15 +52,72 @@
               <td>9473658463</td>
               <td>True</td>
               <td></td>
-              <td><button class="waves-effect waves-light btn-small green" id="approve" onclick="approves()">Approve</button></td>
-              <td><button class="waves-effect waves-light btn-small green" id="reject" onclick="rejects()">Reject</button></td>
+              <td><button class="waves-effect waves-light btn green" id="approve" onclick="approves()">Approve</button></td>
+              <td><button class="waves-effect waves-light btn green" id="reject" onclick="rejects()">Reject</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>ABC</td>
+              <td>XYZ</td>
+              <td>Female</td>
+              <td>3</td>
+              <td>ZZZ</td>
+              <td>YYY</td>
+              <td>9473658463</td>
+              <td>True</td>
+              <td></td>
+              <td><button class="waves-effect waves-light btn green" id="approve" onclick="approves()">Approve</button></td>
+              <td><button class="waves-effect waves-light btn green" id="reject" onclick="rejects()">Reject</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>ABC</td>
+              <td>XYZ</td>
+              <td>Female</td>
+              <td>3</td>
+              <td>ZZZ</td>
+              <td>YYY</td>
+              <td>9473658463</td>
+              <td>True</td>
+              <td></td>
+              <td><button class="waves-effect waves-light btn green" id="approve" onclick="approves()">Approve</button></td>
+              <td><button class="waves-effect waves-light btn green" id="reject" onclick="rejects()">Reject</button></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m4 l3">
+        <ul id="nav-mobile" class="side-nav">
+          <img src="images/Poshan.jpg"><br><br>
+          <div style="padding-left:50px;">
+            <bold>
+              <h6><strong>Bharuch MTC</strong></h6>
+              <h6><strong>Sam Shukla</strong></h6>
+            </bold>
+          </div><br><br>
+          <li><a href="underTreatment.html">Children Under Treatment</a></li>
+          <li><a href="waitingList.html">Waiting List of Children</a></li>
+          <li><a href="dischargedChildren.html">Discharged Children</a></li>
+          <li><a href="MTCDetails.html">MTC Details</a></li>
+          <li style="padding-left:50px; padding-right: 100px;"><a href="index.html" class="waves-effect waves-light btn green">LOGOUT</a></li>
+        </ul>
+      </div>
+    </div>
+
      <!--JavaScript at end of body for optimized loading-->
-     <script type="text/javascript" src="js/materialize.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+     <script>
+     $(document).ready(function(){
+       $(".button-collapse").sideNav();
+       $(".sidebar").sideNav();
+        closeOnClick: true;
+     });
+      </script>
      <script>
       function approves()
       {

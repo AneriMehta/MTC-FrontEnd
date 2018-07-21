@@ -14,7 +14,7 @@
        <div class="col s12">
          <nav class="nav-wrapper green">
            <a href="#" class="brand-logo center">MTC</a>
-           <ul class="right">
+           <ul>
              <li>
                <a href="" data-activates="nav-mobile" class="sidebar"><i class="material-icons">menu</i></a>
              </li>
@@ -102,7 +102,7 @@
             <li><a href="waitingList.html">Waiting List of Children</a></li>
             <li><a href="dischargedChildren.html">Discharged Children</a></li>
             <li><a href="MTCDetails.html">MTC Details</a></li>
-            <li style="padding-left:50px; padding-right: 100px;"><a href="index.html" class="waves-effect waves-light btn green">LOGOUT</a></li>
+            <li style="padding-left:25px;"><a href="index.html" class="waves-effect waves-light btn green">LOGOUT</a></li>
           </ul>
         </div>
       </div>
@@ -112,7 +112,7 @@
      <script>
      $(document).ready(function(){
        $(".button-collapse").sideNav();
-       $(".sidebar").sideNav();
+       $(".sidebar").sideNav({menuWidth: 225, draggable: true,});
         closeOnClick: true;
      });
      </script>

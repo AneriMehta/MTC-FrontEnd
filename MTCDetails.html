@@ -4,6 +4,13 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
      <!--Import Google Icon Font-->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <style>
+      md-sidenav.md-locked-open {
+       width: 100px;
+       min-width: 250px;
+       max-width: 250px;
+     }
+     </style>
      <!--Import materialize.css-->
      <!--Let browser know website is optimized for mobile-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,7 +21,7 @@
        <div class="col s12">
          <nav class="nav-wrapper green">
            <a href="#" class="brand-logo center">MTC</a>
-           <ul class="right">
+           <ul>
              <li>
                <a href="" data-activates="nav-mobile" class="sidebar"><i class="material-icons">menu</i></a>
              </li>
@@ -65,7 +72,7 @@
              <li><a href="waitingList.html">Waiting List of Children</a></li>
              <li><a href="dischargedChildren.html">Discharged Children</a></li>
              <li><a href="MTCDetails.html">MTC Details</a></li>
-             <li style="padding-left:50px; padding-right: 100px;"><a href="index.html" class="waves-effect waves-light btn green">LOGOUT</a></li>
+             <li style="padding-left:25px"><a href="index.html" class="waves-effect waves-light btn green">LOGOUT</a></li>
            </ul>
          </div>
        </div>
@@ -76,8 +83,8 @@
       <script>
       $(document).ready(function(){
         $(".button-collapse").sideNav();
-        $(".sidebar").sideNav();
-         closeOnClick: true;
+        $(".sidebar").sideNav({menuWidth: 225, draggable: true,})
+          closeOnClick: true;
       });
       </script>
    </body>
